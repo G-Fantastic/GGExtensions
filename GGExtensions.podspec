@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "GGExtensions"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "方便iOS开发的Swift扩展库"
   spec.description  = <<-DESC
                       方便iOS开发的Swift扩展库
