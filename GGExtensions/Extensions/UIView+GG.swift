@@ -7,12 +7,7 @@
 //
 
 import Foundation
-#if os(iOS) || os(tvOS)
 import UIKit
-
-#else
-import AppKit
-#endif
 
 /// 对UIView的Subviews的操作的Extensions
 extension GGReactive where Base : UIView{
@@ -64,19 +59,6 @@ extension GGReactive where Base : UIView{
      注意：有些subview可能是在界面布局完成之后才真正添加上去的，所有此方法最好在"界面加载结束"的"完成回调"中执行，或者直接延迟执行1~2s
      */
     public func printSubviewsDict(_ prefix: String = "", _ pre: String = "", _ dict: [UIView : Any]? = nil) {
-        // 方法一：效率低
-        //        print(prefix + pre + ClassName(of: self))
-        //
-        //        let valueDict = subviewsDict[self] as? [UIView : Any]
-        //
-        //        guard let unpackDict = valueDict else {
-        //            return
-        //        }
-        //        for key in unpackDict.keys{
-        //            key.printSubviewsDict("\t\(prefix)", "|- ")
-        //        }
-        
-        // 方法二：不用重复计算subviewsDict（因为subviewsDict是计算型属性，每次调用都会重新计算）。这种方式效率高
         
         // 成员变量 subviewsDict 不能直接作为参数的默认值，只要 dict 不为 nil，subviewsDict就不会被执行
         let unpackSubviewsDict = dict ?? subviewsDict

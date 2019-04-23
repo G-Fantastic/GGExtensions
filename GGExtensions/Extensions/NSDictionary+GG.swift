@@ -23,13 +23,6 @@ extension GGReactive where Base : NSDictionary{
             return swiftDict
         }else{
             base.forEach { (k, v) in
-                /**
-                 无法将 k 打印出有 双引号的效果，要达到双引号，必须将 k 转成 Swift的String类型，
-                 但由于声明的时候，k 是 NSObject 类型， String不是NSObject类型，无法转换。
-                 Any和AnyObject都无法满足字典 key 的要求，因为没有实现 Hashable 协议，要让 key 同时
-                 可以接收 String和NSObject ，只能是 AnyHashable，但是这种情况，需要解包，打印的时候，
-                 是无法解包的，会打印类似如下结果：AnyHashable("1")，会带有 AnyHashable(...)。
-                */
                 let key = k as! NSObject
                 if v is NSDictionary{
                     let nsDict = v as! NSDictionary

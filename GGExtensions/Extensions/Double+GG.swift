@@ -16,12 +16,7 @@ extension GGReactive where Base == Double{
     /// - Parameter places: 保留几位
     /// - Returns: 返回Double
     public func doubleRoundOff(places: Int) -> Double {
-        // 方法一：
         return Double(String(format: "%.\(places)f", base)) ?? 0
-        
-        // 方法二：
-//        let divisor = pow(10.0, Double(places))
-//        return (base * divisor).rounded() / divisor
     }
     
     
