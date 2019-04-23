@@ -19,7 +19,7 @@ extension GGReactive where Base == Date{
     /// 获取当前时间对象 毫秒级 时间戳 - 13位
     public var milliTimeStamp : CLongLong {
         let timeInterval: TimeInterval = base.timeIntervalSince1970
-        let millisecond = CLongLong(round(timeInterval*1000))
+        let millisecond = CLongLong(round(timeInterval * 1000))
         return millisecond
     }
     

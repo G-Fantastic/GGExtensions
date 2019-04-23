@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		040D3FC7226DBD0D0009D2B5 /* GGExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 040D3FC5226DBD0D0009D2B5 /* GGExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0446F1D3226EF42C0018C20D /* UIViewController+GG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0446F1D2226EF42C0018C20D /* UIViewController+GG.swift */; };
 		0458409D226DBF98007626D1 /* GGReactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458409B226DBF97007626D1 /* GGReactive.swift */; };
 		0458409E226DBF98007626D1 /* Extensions+GGRC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458409C226DBF98007626D1 /* Extensions+GGRC.swift */; };
 		045840A7226DBF9F007626D1 /* UIView+GG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045840A0226DBF9F007626D1 /* UIView+GG.swift */; };
@@ -27,6 +28,7 @@
 		040D3FC2226DBD0D0009D2B5 /* GGExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GGExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		040D3FC5226DBD0D0009D2B5 /* GGExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGExtensions.h; sourceTree = "<group>"; };
 		040D3FC6226DBD0D0009D2B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0446F1D2226EF42C0018C20D /* UIViewController+GG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+GG.swift"; sourceTree = "<group>"; };
 		0458409B226DBF97007626D1 /* GGReactive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GGReactive.swift; sourceTree = "<group>"; };
 		0458409C226DBF98007626D1 /* Extensions+GGRC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+GGRC.swift"; sourceTree = "<group>"; };
 		045840A0226DBF9F007626D1 /* UIView+GG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+GG.swift"; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				045840A5226DBF9F007626D1 /* Int+GG.swift */,
 				045840A6226DBF9F007626D1 /* NSArray+GG.swift */,
 				045840B6226DC145007626D1 /* Date+GG.swift */,
+				0446F1D2226EF42C0018C20D /* UIViewController+GG.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				045840B7226DC145007626D1 /* Date+GG.swift in Sources */,
 				045840A9226DBF9F007626D1 /* String+GG.swift in Sources */,
 				045840AB226DBF9F007626D1 /* NSDictionary+GG.swift in Sources */,
+				0446F1D3226EF42C0018C20D /* UIViewController+GG.swift in Sources */,
 				045840A7226DBF9F007626D1 /* UIView+GG.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
