@@ -101,22 +101,22 @@ public class AppVersion: NSObject {
      ## Example:
      使用普通的字符串比较版本大小：
      ```
-     print("1.0.3".compare("1.0.2").rawValue)    // .orderedDescending: 1    ✔
-     print("1.0.3".compare("1.0.20").rawValue)   // .orderedDescending: 1    ✘
-     print("1.5.2".compare("1.10.2").rawValue)   // .orderedDescending: 1    ✘
-     print("1.01.3".compare("1.1.03").rawValue)  // .orderedAscending: -1    ✘
-     print("1.a.2".compare("1.0.1").rawValue)    // .orderedDescending: 1    ✘
+     print("1.0.3".compare("1.0.2").rawValue)    // .orderedDescending: 1    ✅
+     print("1.0.3".compare("1.0.20").rawValue)   // .orderedDescending: 1    ❌
+     print("1.5.2".compare("1.10.2").rawValue)   // .orderedDescending: 1    ❌
+     print("1.01.3".compare("1.1.03").rawValue)  // .orderedAscending: -1    ❌
+     print("1.a.2".compare("1.0.1").rawValue)    // .orderedDescending: 1    ❌
      ```
      使用 AppVersion 来比较版本号大小
      ```
-     print((try! AppVersion("1.0.3")).compare(try! AppVersion("1.0.2")).rawValue)    // .orderedDescending: 1   ✔
-     print((try! AppVersion("1.0.3")).compare(try! AppVersion("1.0.20")).rawValue)   // .orderedAscending: -1   ✔
-     print((try! AppVersion("1.5.2")).compare(try! AppVersion("1.10.2")).rawValue)   // .orderedAscending: -1   ✔
-     print((try! AppVersion("1.01.3")).compare(try! AppVersion("1.1.03")).rawValue)  // .orderedSame:       0   ✔
-     print((try? AppVersion("1.a.2"))?.compare(try! AppVersion("1.0.1")).rawValue)   // nil                     ✔
+     print((try! AppVersion("1.0.3")).compare(try! AppVersion("1.0.2")).rawValue)    // .orderedDescending: 1   ✅
+     print((try! AppVersion("1.0.3")).compare(try! AppVersion("1.0.20")).rawValue)   // .orderedAscending: -1   ✅
+     print((try! AppVersion("1.5.2")).compare(try! AppVersion("1.10.2")).rawValue)   // .orderedAscending: -1   ✅
+     print((try! AppVersion("1.01.3")).compare(try! AppVersion("1.1.03")).rawValue)  // .orderedSame:       0   ✅
+     print((try? AppVersion("1.a.2"))?.compare(try! AppVersion("1.0.1")).rawValue)   // nil                     ✅
      
      ```
-     可见，普通字符串无法正确比较版本号的大小，必须使用AppVersion才行
+     可见，普通字符串的compare函数无法正确比较版本号的大小，使用AppVersion才行
     */
     public func compare(_ other: AppVersion) -> ComparisonResult {
         return major == other.major
